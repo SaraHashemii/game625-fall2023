@@ -1,26 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class CollectiblesController : MonoBehaviour
+
+public class PelletsController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private static int _haveEaten = 0;
+    public static int GetHaveEaten() { return _haveEaten; }
+    public static void SetHaveEaten(int value) { _haveEaten = value; }
 
 
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.CompareTag("Player"))
         {
+            _haveEaten++;
             Destroy(gameObject);
         }
     }

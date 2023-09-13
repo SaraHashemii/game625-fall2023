@@ -5,36 +5,31 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public GameObject originalPrefab;
+
     [SerializeField] private Transform _target;
 
     [SerializeField] private LayerMask obstacleLayer;
     private NavMeshAgent _enemyAgent;
 
-    private float _freezeDuration = 0f; 
-
+    private float _freezeDuration = 0f;
     private float _originalSpeed;
 
+    private Vector3 _startPosition;
+
+  
     void Start()
     {
         _enemyAgent = GetComponent<NavMeshAgent>();
         _originalSpeed = _enemyAgent.speed;
+        _startPosition = transform.position;
+        Debug.Log($"Stasrt position is: {_startPosition}");
+
     }
 
     void Update()
     {
-        //if (_target != null)
-        //{
-        //    _enemyAgent.SetDestination(_target.position);
-        //}
-
-
-        //if (IsEnemyInPath())
-        //{
-
-        //    Vector3 newDestination = _target.position + Random.insideUnitSphere * 10f;
-        //    _enemyAgent.SetDestination(newDestination);
-        //}
-        if (_freezeDuration <= 0f) // Check if not frozen
+        if (_freezeDuration <= 0f)
         {
             if (_target != null)
             {
@@ -47,13 +42,13 @@ public class EnemyMovement : MonoBehaviour
                 _enemyAgent.SetDestination(newDestination);
             }
         }
-        else // If frozen, decrement the freeze duration
+        else
         {
             _freezeDuration -= Time.deltaTime;
 
             if (_freezeDuration <= 0f)
             {
-                // Unfreeze the agent by restoring its speed to the original value
+
                 _enemyAgent.speed = _originalSpeed;
             }
         }
@@ -79,15 +74,24 @@ public class EnemyMovement : MonoBehaviour
         return false;
     }
 
-    // Function to freeze the enemy
+
     public void FreezeEnemy(float duration)
     {
         _enemyAgent.speed = 0f;
         _freezeDuration = duration;
     }
+
+    public void Respawn()
+    {
+
+        _enemyAgent.speed = 0;
+        Debug.Log($"Stasrt position is: {_startPosition}");
+        transform.position = _startPosition;
+
+
+    }
+
 }
-
-
 
 
 

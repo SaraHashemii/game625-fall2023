@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _speed = 10f;
     [SerializeField] private float _rotationSpeed = 120;
 
+  
+
     private Vector3 _movement;
 
 
@@ -19,16 +21,13 @@ public class PlayerController : MonoBehaviour
     private bool _isWalking;
 
 
-    [Header("Health")]
-    [SerializeField] private int maxHealth = 1;
-    [SerializeField] private int currentHealth;
-
     private void Awake()
     {
         GetRefrences();
-        currentHealth = maxHealth;
+        
     }
 
+  
     // Update is called once per frame
     void Update()
     {
@@ -68,29 +67,6 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            // Enemy caught the player, reduce health
-            currentHealth--;
-            Debug.Log(currentHealth);
-
-            if (currentHealth <= 0)
-            {
-                // Player is defeated, remove the player
-                RemovePlayer();
-            }
-        }
-    }
-
-    private void RemovePlayer()
-    {
-        // Handle player removal logic here (e.g., play death animation, show game over screen, etc.)
-
-        // For this example, we'll simply reload the current scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 }
 
 
