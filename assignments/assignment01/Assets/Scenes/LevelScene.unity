@@ -32331,10 +32331,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpecialPelt
       objectReference: {fileID: 0}
-    - target: {fileID: 4445268805357810182, guid: 071f411eece314c30b3c7521489a11b5, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5749227253892145868, guid: 071f411eece314c30b3c7521489a11b5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.51

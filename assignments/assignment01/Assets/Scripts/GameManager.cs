@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _haveEatenText.text = PelletsController.GetHaveEaten().ToString();
-        _currentHealthText.text = PlayerCollisionController.GetcurrentHealth().ToString();
+        _haveEatenText.text = "Points " + PelletsController.GetHaveEaten().ToString() + " /358";
+        _currentHealthText.text = "Health " + PlayerCollisionController.GetcurrentHealth().ToString() + " /3";
 
         if (PelletsController.GetHaveEaten() >= 358)
         {
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         if (PlayerCollisionController.GetIsGameOver())
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-            
+
         }
     }
 }
