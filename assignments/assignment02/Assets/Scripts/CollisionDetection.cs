@@ -15,7 +15,6 @@ public class CollisionDetection : Subject
             if (collectible != null)
             {
                 AddResource(collectible);
-                // Optionally, you can destroy the collected object in the scene.
                 Destroy(gameObject);
 
             }

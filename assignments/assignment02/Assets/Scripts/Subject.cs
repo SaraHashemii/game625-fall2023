@@ -23,7 +23,7 @@ public class Subject : MonoBehaviour
         NotifyObservers(collectible);
     }
 
-    public void NotifyObservers(Collectibles collectible)
+    protected void NotifyObservers(Collectibles collectible)
     {
         ItemType type = collectible.type;
 
