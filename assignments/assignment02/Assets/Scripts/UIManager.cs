@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
 
         foreach (var kvp in inventoryitems)
         {
-            inventoryText.text += $"{kvp.Key}: {kvp.Value}\n";
+            inventoryText.text += $"{kvp.Key}  {kvp.Value}\n";
 
         }
     }
