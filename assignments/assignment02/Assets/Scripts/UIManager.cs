@@ -17,12 +17,12 @@ public class UIManager : MonoBehaviour
         Inventory.OnInventoryUpdated -= UpdateInventoryUI;
     }
 
-    private void UpdateInventoryUI(Dictionary<ItemType, int> inventoryContent)
+    private void UpdateInventoryUI(Dictionary<ItemType, int> inventoryitems)
     {
 
         inventoryText.text = "\n";
 
-        foreach (var kvp in inventoryContent)
+        foreach (var kvp in inventoryitems)
         {
             inventoryText.text += $"{kvp.Key}: {kvp.Value}\n";
 
