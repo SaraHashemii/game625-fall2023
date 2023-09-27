@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Subject : MonoBehaviour
+public class Observable : MonoBehaviour
 {
     private List<IObserver> observers = new List<IObserver>();
     private List<Collectibles> resources = new List<Collectibles>();

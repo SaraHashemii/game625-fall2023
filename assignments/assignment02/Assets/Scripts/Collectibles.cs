@@ -6,11 +6,11 @@ using UnityEngine;
 public enum ItemType
 {
     Wood,
-    Stone
+    Stone,
+    Potion
 }
 
 public class Collectibles : MonoBehaviour
 {
-    public string itemName;
     public ItemType type;
 }

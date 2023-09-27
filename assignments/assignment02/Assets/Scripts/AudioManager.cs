@@ -6,7 +6,6 @@ public class AudioManager : MonoBehaviour
 {
 
     [SerializeField] AudioSource audioSource;
-    [SerializeField] AudioClip collectSound;
 
 
     private void OnEnable()
@@ -24,10 +23,10 @@ public class AudioManager : MonoBehaviour
     private void PlayCollectSound(Dictionary<ItemType, int> inventoryContent)
     {
 
-        if (collectSound != null && audioSource != null)
+        if (audioSource != null)
         {
 
-            audioSource.PlayOneShot(collectSound);
+            audioSource.Play();
         }
 
 

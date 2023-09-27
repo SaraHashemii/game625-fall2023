@@ -22,9 +22,9 @@ public class UIManager : MonoBehaviour
 
         inventoryText.text = "\n";
 
-        foreach (var kvp in inventoryitems)
+        foreach (var item in inventoryitems)
         {
-            inventoryText.text += $"{kvp.Key}  {kvp.Value}\n";
+            inventoryText.text += $"{item.Key}  {item.Value}\n";
 
         }
     }

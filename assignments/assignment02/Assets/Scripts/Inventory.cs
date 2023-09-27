@@ -47,5 +47,6 @@ public class Inventory : MonoBehaviour, IObserver
         {
             OnInventoryUpdated(collectiblesDictionary);
         }
+
     }
 }
