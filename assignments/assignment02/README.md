@@ -11,4 +11,6 @@ Chopped Log by Davemane42 [CC-BY] via Poly Pizza
 
 basic stone 3 by felix stief [CC-BY] via Poly Pizza
 
+Potion Bottle - Game Asset by Don Carson [CC-BY] via Poly Pizza
+
 RPG Essentials SFX - Free! by [Leohpaz]( https://leohpaz.itch.io)
