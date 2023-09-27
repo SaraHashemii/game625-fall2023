@@ -33,7 +33,7 @@ public class PlayerMovementController : MonoBehaviour
     {
 
         Movement();
-        Destroy();
+        //Destroy();
 
     }
 
@@ -68,14 +68,14 @@ public class PlayerMovementController : MonoBehaviour
 
     }
 
-    private void Destroy()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            _anim.SetTrigger("Attack");
-        }
+    //private void Destroy()
+    //{
+    //    if (Input.GetButtonDown("Fire1"))
+    //    {
+    //        _anim.SetTrigger("Attack");
+    //    }
 
-    }
+    //}
 
 
 }
